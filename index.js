@@ -63,7 +63,7 @@ function formatScope(scope) {
 function formatHead({ type, scope, subject }, config) {
   const prelude = config.conventional
     ? `${type.name}${formatScope(scope)}: ${type.emoji}`
-    : `${type.emoji} ${formatScope(scope)}`
+    : `${type.emoji} ${type.name}${formatScope(scope)}:`
 
   return `${prelude} ${subject}`
 }
